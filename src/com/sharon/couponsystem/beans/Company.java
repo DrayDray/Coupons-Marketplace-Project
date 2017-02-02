@@ -2,6 +2,9 @@ package com.sharon.couponsystem.beans;
 
 import java.util.Collection;
 
+//JAX-RS (Jackson) supports the use of JAXB (Java API for XML Binding) to bind a JavaBean to XML or JSON and vise versa. The JavaBean must be annotated with @XmlRootElement. 
+//see:
+//https://www.ibm.com/developerworks/library/wa-aj-tomcat/
 import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Company {

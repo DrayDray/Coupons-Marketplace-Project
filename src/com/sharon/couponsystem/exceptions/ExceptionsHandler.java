@@ -5,8 +5,8 @@ import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 import com.sharon.couponsystem.beans.ErrorBean;
+import com.sharon.couponsystem.enums.ErrorType;
 
- //Question - review this b/c i don't really understand
 @Provider
 public class ExceptionsHandler extends Exception implements ExceptionMapper<Throwable> 
 {
@@ -17,9 +17,20 @@ public class ExceptionsHandler extends Exception implements ExceptionMapper<Thro
     	if (exception instanceof CouponSystemException){
     		CouponSystemException e = (CouponSystemException) exception;
     		
-    		int internalErrorCode = e.getInternalErrorCode().getInternalErrorCode();
-    		String message = e.getMessage();
-    		ErrorBean errorBean = new ErrorBean(internalErrorCode, message);
+    		//get errorType from exception
+    		ErrorType errorType = e.getInternalErrorType();
+    		
+    		//get internal error code from the errorType
+    		int internalErrorCode = errorType.getInternalErrorCode();
+    		
+    		//get internal error name from errorType
+    		String internalErrorName = errorType.getName();
+    		
+    		//if i wanted the exception message (from CouponSystemException, originally from Throwable)
+    		//String message = e.getMessage();
+    		
+    		//Create ErrorBean which encapsulates what went wrong
+    		ErrorBean errorBean = new ErrorBean(internalErrorCode, internalErrorName);
     		return Response.status(700).entity(errorBean).build();
     	}
     	

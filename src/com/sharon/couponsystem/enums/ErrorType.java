@@ -23,10 +23,11 @@ public enum ErrorType {
 	private static Map<String, ErrorType> nameToTypeMap = new HashMap<String, ErrorType>();
 	
 	//this is a static block, therefore it is called immediately as the class is uploaded 
+	//creating a map of the string name of the errortype (key) to the actual errortype which contains both the name and internalerrorcode (value)
 	static {
-		for (ErrorType type : EnumSet.allOf(ErrorType.class)){
-			String name = type.getName();			
-			nameToTypeMap.put(name, type);
+		for (ErrorType errorType : EnumSet.allOf(ErrorType.class)){
+			String name = errorType.getName();			
+			nameToTypeMap.put(name, errorType);
 		}		
 	}
 

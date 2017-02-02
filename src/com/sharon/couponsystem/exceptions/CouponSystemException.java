@@ -4,19 +4,19 @@ import com.sharon.couponsystem.enums.ErrorType;
 
 public class CouponSystemException extends Exception {
 
-	private ErrorType internalErrorType;
+	private ErrorType errorType;
 	
-	public CouponSystemException(ErrorType internalErrorCode){
-		this.internalErrorType = internalErrorCode;
+	public CouponSystemException(ErrorType internalErrorType){
+		this.errorType = internalErrorType;
 	}
 
-	public CouponSystemException(ErrorType internalErrorCode, Exception e){
+	public CouponSystemException(ErrorType internalErrorType, Exception e){
 		super(e);
-		this.internalErrorType = internalErrorCode;
+		this.errorType = internalErrorType;
 	}
 	
-	public ErrorType getInternalErrorCode() {
-		return internalErrorType;
+	public ErrorType getInternalErrorType() {
+		return errorType;
 	}
 	
 }

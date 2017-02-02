@@ -61,7 +61,7 @@ public class UserServicesApi {
 		//create a new cookie
 		Cookie cookie = new Cookie("clientType", clientType);
 		
-		//the fact that i changed the userId to a string here might be a problem -  test this
+		//the fact that i changed the userId to a string here might be a problem -  need to test this
 		Cookie cookie2 = new Cookie("userId", ""+userId);
 		cookie.setPath("/");
 		cookie2.setPath("/");

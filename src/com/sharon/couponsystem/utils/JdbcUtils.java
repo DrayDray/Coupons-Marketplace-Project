@@ -8,9 +8,18 @@ import java.sql.SQLException;
 
 public class JdbcUtils {
 
+	//The Class class is located in the java.lang package, so it is distributed with java, and imported automatically into every class.
+	
 	static
 	{
 		try {
+			//Class.forName(className) loads the class with the specified className.
+			//When you let Java load the driver class with the forName call, the driver will register itself so that it can be used.
+			//basically calling new com.mysql.jdbc.Driver()
+			//see: http://stackoverflow.com/questions/12933113/better-understaning-class-fornamecom-mysql-jdbc-driver-newinstance
+			
+			//A JDBC driver is a software component enabling a Java application to interact with a database.
+			//To connect with individual databases, JDBC (the Java Database Connectivity API) requires drivers for each database.
 			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
