@@ -1,0 +1,30 @@
+<div ng-controller="LoginController as loginCtrl">
+
+	<center>
+		<h1>COUPONS... Get your CoupOn</h1>
+	</center>
+
+	<form ng-submit="loginCtrl.login()">
+		<fieldset>
+			<legend> Login </legend>
+			User Id: <input type="text" ng-model="loginCtrl.user.userId"></input><br>
+			Password :<input type="password" ng-model="loginCtrl.user.password"></input><br>
+			Type: <select ng-model="loginCtrl.user.clientType">
+				<option value="customer">Customer</option>
+				<option value="company">Company</option>
+				<option value="admin">Administrator</option>
+			</select> <br>
+			<input type="submit" value="Click to Submit" />
+		</fieldset>
+	</form> <br><br>
+
+	<form ng-submit="loginCtrl.forwardToRegistration()">
+		<fieldset>
+			<legend> Register </legend>
+			New to our site? <br>
+			<input type="submit" value="Register Now" />
+		</fieldset>
+	</form>
+
+</div>
+

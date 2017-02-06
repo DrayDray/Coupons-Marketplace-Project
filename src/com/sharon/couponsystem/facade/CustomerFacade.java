@@ -34,6 +34,9 @@ public class CustomerFacade implements ICouponClientFacade{
 		if(customerDao.isCustomerExistsByTitle(customer)){
 			throw new CouponSystemException(ErrorType.CUSTOMER_NAME_ALREADY_EXISTS);
 		}
+		if(customerDao.isCustomerExistsById(customer.getId())){
+			throw new CouponSystemException(ErrorType.CUSTOMER_ID_ALREADY_EXISTS);
+		}
 		customerDao.addCustomer(customer);
 	}
 	

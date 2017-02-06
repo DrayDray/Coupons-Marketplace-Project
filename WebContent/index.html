@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<meta charset="windows-1255">
+		<title>Coupons Project</title>
+		
+		<link href="./styles/bootstrap.min.css" rel="stylesheet">
+		<link href="./styles/styles.css" rel="stylesheet">
+	
+		<script type="text/javascript" src="./scripts/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	
+		<script type="text/javascript" src="./scripts/services/couponsServices.js"></script>
+		<script type="text/javascript" src="./scripts/app.js"></script>
+		
+		<script type="text/javascript" src="./scripts/directives/directives.js"></script>
+		
+		<script type="text/javascript" src="./scripts/controllers/controllersModule.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/loginController.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/adminController.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/companyController.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/customerController.js"></script>
+		
+	</head>
+	
+	<body>
+		<logo></logo>
+			<!-- ngView is a directive that complements the $route service
+			by including the rendered template of the current route into the main layout (index.html) file. 
+			Every time the current route changes, the included view changes with it 
+			according to the configuration of the $route service. -->
+			<div ng-view></div>
+	</body>	
+		

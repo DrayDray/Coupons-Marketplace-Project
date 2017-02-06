@@ -16,7 +16,9 @@ public enum ErrorType {
 	COUPON_PREVIOUSLY_PURCHASED(8, "CouponPreviouslyPurchased"),
 	COUPON_OUT_OF_STOCK(9, "CouponOutOfStock"),
 	COUPON_EXPIRED(10, "CouponExpired"),
-	COUPON_NOT_OWNED_BY_THIS_COMPANY(11, "CouponNotOwnedByThisCompany");
+	COUPON_NOT_OWNED_BY_THIS_COMPANY(11, "CouponNotOwnedByThisCompany"),
+	CUSTOMER_ID_ALREADY_EXISTS(12, "CustomerIdAlreadyExists"),
+	COMPANY_ID_ALREADY_EXISTS(13, "CompanyIdAlreadyExists");
 	
 	private int internalErrorCode;
 	private String name;

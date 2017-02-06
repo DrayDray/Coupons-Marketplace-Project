@@ -1,0 +1,18 @@
+<div ng-controller="LoginController as loginCtrl">
+
+	<h3>Register</h3>
+
+	Client Type :<select ng-model="loginCtrl.newUser.clientType">
+		<option value="customer">Customer</option>
+		<option value="company">Company</option>
+	</select>
+
+	<div>
+		<customer-register-view ng-show="loginCtrl.newUser.clientType ==='customer'"></customer-register-view>
+		<company-register-view ng-show="loginCtrl.newUser.clientType ==='company'"></company-register-view>
+	</div>
+
+</div>
+
+<!-- TO DO
+1. Change input type of email to email instead of text -->

@@ -1,0 +1,16 @@
+<div ng-controller="CustomerController as customerCtrl">
+
+	<center>
+		<h1>Welcome Customer</h1>
+	</center>
+
+	<button ng-click="customerCtrl.changeCustomerView('changeCustomerPasswordView');">
+	Change Password
+	</button>
+
+	<div>
+		<change-customer-password-view ng-show="customerView === 'changeCustomerPasswordView'"></change-customer-password-view>
+	</div>
+</div>
+
+<!-- TO DO: I should change this so that the customer doesn't have to reenter his id. -->

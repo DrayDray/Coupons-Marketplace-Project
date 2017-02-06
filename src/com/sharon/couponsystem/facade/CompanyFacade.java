@@ -21,6 +21,9 @@ public class CompanyFacade implements ICouponClientFacade{
 		if(companyDao.isCompanyExistsByTitle(company.getCompName())){
 			throw new CouponSystemException(ErrorType.COMPANY_NAME_ALREADY_EXISTS);
 		}
+		if(companyDao.isCompanyExistsById(company.getId())){
+			throw new CouponSystemException(ErrorType.COMPANY_ID_ALREADY_EXISTS);
+		}
 		companyDao.addCompany(company);
 	}
 	

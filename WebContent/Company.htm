@@ -1,0 +1,22 @@
+<div ng-controller="CompanyController as companyCtrl">
+
+	<center>
+		<h1>Welcome, Company</h1>
+	</center>
+
+	<button ng-click = "companyCtrl.changeCompanyView('changeCompanyPasswordView');">Change Password</button>
+	<button ng-click = "companyCtrl.changeCompanyView('addCouponView');">Add Coupon</button>
+
+	<div>
+		<change-company-password-view ng-show="companyView === 'changeCompanyPasswordView'"></change-company-password-view>
+		<add-coupon-view ng-show="companyView === 'addCouponView'"></add-coupon-view>
+	</div>
+
+</div>
+	
+	<!-- TO DO: 
+	1. I should change this so that the company doesn't have to reenter their id. Try to use factory solution, as seen here:
+	http://stackoverflow.com/questions/21919962/share-data-between-angularjs-controllers
+	2. Add "Welcome, Company Name"
+	3. Only the company that logged in should be able to update their own password!!
+	 -->

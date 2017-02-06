@@ -248,4 +248,16 @@ public class CompanyDao implements ICompanyDao {
 			JdbcUtils.closeResources(connection, preparedStatement, resultSet);
 		}
 	}
+	
+	public boolean isCompanyExistsById(long companyId){
+		try {
+			if (this.getCompany(companyId) != null) {
+				return true;
+			}
+		} 
+		catch (CouponSystemException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 }

@@ -31,4 +31,11 @@ public class ErrorBean {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+	@Override
+	public String toString() {
+		return "Internal Error Code " + internalErrorCode + ": " + message;
+	}
+	
+	
 }

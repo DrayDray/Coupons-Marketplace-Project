@@ -13,7 +13,7 @@ public class ExceptionsHandler extends Exception implements ExceptionMapper<Thro
     @Override
     public Response toResponse(Throwable exception) 
     {
-    	System.out.println("Just entered into the exceptions mapper");
+    	System.out.println("Just entered into the Exceptions Handler");
     	if (exception instanceof CouponSystemException){
     		CouponSystemException e = (CouponSystemException) exception;
     		
@@ -31,6 +31,7 @@ public class ExceptionsHandler extends Exception implements ExceptionMapper<Thro
     		
     		//Create ErrorBean which encapsulates what went wrong
     		ErrorBean errorBean = new ErrorBean(internalErrorCode, internalErrorName);
+    		System.out.println(errorBean);
     		return Response.status(700).entity(errorBean).build();
     	}
     	

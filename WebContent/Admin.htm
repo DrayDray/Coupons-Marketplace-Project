@@ -1,0 +1,27 @@
+<div ng-controller="AdminController as adminCtrl">
+
+	<center><h1>Welcome Administrator</h1></center>
+
+	<button ng-click = "adminCtrl.showAllCustomers(); adminCtrl.changeAdminView('allCustomersView');"> Show All Customers </button>
+	<button ng-click = "adminCtrl.showAllCompanies(); adminCtrl.changeAdminView('allCompaniesView');"> Show All Companies </button>  
+	<button ng-click = "adminCtrl.changeAdminView('chooseCustomerView');"> View customer </button> 
+	<button ng-click = "adminCtrl.changeAdminView('unsubscribeCompany');"> Unsubscribe Company </button>
+	<button ng-click = "adminCtrl.changeAdminView('unsubscribeCustomer');"> Unsubscribe Customer </button>
+	<button ng-click = "adminCtrl.changeAdminView('chooseCompanyView');"> View company </button> 
+	<button ng-click = "adminCtrl.changeAdminView('getAllCouponsByCompanyView');"> View Coupons By Company </button> 
+
+<div>
+	<all-customers-view ng-show = "adminView === 'allCustomersView'"> </all-customers-view>
+	<choose-customer-view ng-show = "adminView === 'chooseCustomerView'"> </choose-customer-view>
+	<show-one-customer-view ng-show = "adminView === 'showOneCustomer'"> </show-one-customer-view>
+	<unsubscribe-customer-view ng-show = "adminView === 'unsubscribeCustomer'"> </unsubscribe-customer-view>
+	
+	<all-companies-view ng-show = "adminView === 'allCompaniesView'"> </all-companies-view>
+	<choose-company-view ng-show = "adminView === 'chooseCompanyView'"> </choose-company-view>
+	<show-one-company-view ng-show = "adminView === 'showOneCompany'"> </show-one-company-view>
+	<unsubscribe-company-view ng-show = "adminView === 'unsubscribeCompany'"> </unsubscribe-company-view>
+	<get-all-coupons-by-company-view ng-show = "adminView === 'getAllCouponsByCompanyView'"> </get-all-coupons-by-company-view>
+</div>
+
+<!-- TO DO:
+1. Make the customer list into a good looking table -->
