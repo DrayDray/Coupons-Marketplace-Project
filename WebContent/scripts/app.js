@@ -28,10 +28,45 @@
 
 //My other JavaScript Functions
 function showErrorMessage(errorMessage){
-	if(errorMessage === "CustomerDoesNotExist"){
+	if(errorMessage === "CustomerNameAlreadyExists"){
+		//add tailor-made response or remove and handle in controller itself
+		//alert("This customer name already exists. Try again.")
+	}
+	else if(errorMessage === "CompanyNameAlreadyExists"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CouponNameAlreadyExists"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CustomerDoesNotExist"){
 		alert("No customer with that ID exists. Please try another ID.");
 	}
+	else if(errorMessage === "CompanyDoesNotExist"){
+		alert("No company with that ID exists. Please try another ID.");
+	}
+	else if(errorMessage === "LoginFailed"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CouponPreviouslyPurchased"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CouponOutOfStock"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CouponExpired"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CouponNotOwnedByThisCompany"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CustomerIdAlreadyExists"){
+		//add tailor-made response or remove and handle in controller itself
+	}
+	else if(errorMessage === "CompanyIdAlreadyExists"){
+		//add tailor-made response or remove and handle in controller itself
+	}
 	else{
+		//GENERAL_ERROR(1, "GeneralError"),
 		alert("Unsuccessful attempt.");
 	}
 }

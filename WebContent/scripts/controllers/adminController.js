@@ -47,17 +47,18 @@
 				$scope.adminView = "showOneCompany";
 			})
 			.error(function(reponse){
-				alert("Failed to retrieve company.");
+				showErrorMessage(response.message);
+				//alert("Failed to retrieve company.");
 			})
 		};
 
 		this.removeCompany = function(){
 			$http.delete('rest/companies/' + $scope.companyId)
 			.success(function(){
-				alert("Company successfully deleted");
+				alert("Company (ID: " + $scope.companyId + ") successfully deleted.");
 			})
-			.error(function(){
-				alert("Failed to delete company");
+			.error(function(reponse){
+				showErrorMessage(response.message);
 			})
 		};
 
