@@ -34,8 +34,9 @@
 				$scope.customer = response;
 				$scope.adminView = "showOneCustomer";
 			})
-			.error(function(reponse){
-				alert("Failed to retrieve customer.");
+			.error(function(response){
+				showErrorMessage(response.message);
+				//alert("Failed to retrieve customer.");	
 			})
 		};
 

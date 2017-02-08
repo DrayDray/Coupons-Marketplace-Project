@@ -1,7 +1,22 @@
-<p ng-repeat="company in fullListOfCompanies">
-	{{company.id}}
-	{{company.compName}} 
-	{{company.email}}
-	{{company.password}}
-</p>
+<br><table>
+	<thead>
+		<tr>
+			<!-- Header cells - contains header information (created with the <th> element) -->
+			<th>Company ID</th>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Password</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="company in fullListOfCompanies">
+			<!-- Standard cells - contains data (created with the <td> element) -->
+			<td>{{company.id}}</td>
+			<td>{{company.compName}}</td>
+			<td>{{company.email}}</td>
+			<td>{{company.password}}</td>
+		</tr>
+	</tbody>
+</table>
 

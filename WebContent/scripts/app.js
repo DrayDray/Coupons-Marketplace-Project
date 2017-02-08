@@ -24,7 +24,17 @@
 			templateUrl : "Register.html"
 		})
 	})
-}());	
+}());
+
+//My other JavaScript Functions
+function showErrorMessage(errorMessage){
+	if(errorMessage === "CustomerDoesNotExist"){
+		alert("No customer with that ID exists. Please try another ID.");
+	}
+	else{
+		alert("Unsuccessful attempt.");
+	}
+}
 	
 
 /*TO DO:

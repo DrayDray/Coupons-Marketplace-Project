@@ -65,6 +65,4 @@ public class CustomersApi {
 	public void removeCustomer(@PathParam("customerId")long customerId) throws CouponSystemException{
 		customerFacade.removeCustomer(customerId);
 	}
-	
-	
 }

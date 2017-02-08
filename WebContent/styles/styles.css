@@ -1,7 +1,29 @@
 body {
-    background-color: lightgrey;
+    background-color: white;
 }
 .ActiveTab {
 	background-color: red;
 }
+table {
+	border-spacing: 40px 0;
+}
+table, th, td {
+    border: 1px solid black;
+	border-collapse: collapse;
+}
 
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+ tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:nth-child(odd) {
+   background-color:#fff;
+}
